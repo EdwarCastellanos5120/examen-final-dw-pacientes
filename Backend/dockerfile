@@ -1,0 +1,23 @@
+# Use an official Node.js runtime as a base image
+FROM node:20.5.0-alpine3.17
+
+# Create app directory
+WORKDIR /app
+
+# Install app dependencies
+COPY package*.json ./
+
+# Install application dependencies
+RUN npm install
+
+# Copy the rest of your application code to the container
+COPY . .
+
+EXPOSE 3000
+
+# Define the command to run your application
+CMD ["npm", "start"]
+
+# docker images  - list all images
+# docker build -t docker-backend .   - build image
+# docker run --name docker-app -p 3000:3000 dockerbackend - run image

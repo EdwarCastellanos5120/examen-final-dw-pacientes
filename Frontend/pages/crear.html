@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Usuario</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Crear Usuario</h1>
+      <button class="btn btn-secondary" id="regresarMenu">
+        Regresar al Menú Principal
+      </button>
+      <br /><br />
+      <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            placeholder="Ingresa tus Nombres"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input
+            type="text"
+            class="form-control"
+            id="apellido"
+            placeholder="Ingresa tus Apellidos"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="fechaNacimiento" class="form-label"
+            >Fecha de Nacimiento</label
+          >
+          <input
+            type="date"
+            class="form-control"
+            id="fechaNacimiento"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="genero" class="form-label">Género</label>
+          <select class="form-select" id="genero" required>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input
+            type="text"
+            class="form-control"
+            id="direccion"
+            placeholder="Ingresa Direccion"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="telefono"
+            placeholder="Ingresa el Numero Telefonico"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo Electrónico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="correo"
+            placeholder="Ingresa el Correo"
+            required
+          />
+        </div>
+        <!-- Expedientes -->
+        <div class="mb-3">
+          <h3>Expedientes Médicos</h3>
+          <div id="expedientesContainer"></div>
+          <div class="mb-3">
+            <label for="fechaExpediente" class="form-label">Fecha</label>
+            <input
+              type="date"
+              class="form-control"
+              id="fechaExpediente"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="medico" class="form-label">Médico</label>
+            <input type="text" class="form-control" id="medico" required />
+          </div>
+          <div class="mb-3">
+            <label for="diagnostico" class="form-label">Diagnóstico</label>
+            <input type="text" class="form-control" id="diagnostico" required />
+          </div>
+          <div class="mb-3">
+            <label for="receta" class="form-label">Receta</label>
+            <input type="text" class="form-control" id="receta" required />
+          </div>
+          <button type="button" class="btn btn-primary" id="agregarExpediente">
+            Agregar Expediente
+          </button>
+        </div>
+        <!-- Notas Adicionales -->
+        <div class="mb-3">
+          <label for="notasAdicionales" class="form-label"
+            >Notas Adicionales</label
+          >
+          <textarea
+            class="form-control"
+            id="notasAdicionales"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-success" id="crearPaciente">
+          Guardar
+        </button>
+        <br />
+        <br /><br />
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/crear.js"></script>
+  </body>
+</html>
